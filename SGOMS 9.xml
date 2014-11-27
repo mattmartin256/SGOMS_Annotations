@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<annotation-spec>
+  <head>
+    <valuetype-def>
+      <valueset name="category_InternalValueType_0">
+        <value-el color="green">start_of_game_preparations</value-el>
+        <value-el color="red">between_rounds_preparations</value-el>
+        <value-el color="cyan">avoid_hard_enemy</value-el>
+        <value-el color="blue">be_aggresive</value-el>
+        <value-el color="pink">hunt_planning_unit</value-el>
+        <value-el color="orange">find_defensible_position_calm_enviroment</value-el>
+        <value-el>find_defensible_position_chaotic_enviroment</value-el>
+        <value-el color="gray">replenish_supplies_chaotic</value-el>
+        <value-el color="yellow">recover_health</value-el>
+        <value-el color="green">defend_position</value-el>
+        <value-el color="blue">engage_enemy</value-el>
+        <value-el>close_quarters_combat</value-el>
+      </valueset>
+      <valueset name="type_InternalValueType_0">
+        <value-el color="green">adjust_position_slightly</value-el>
+        <value-el color="red">advance</value-el>
+        <value-el color="cyan">assume_defensibe_position</value-el>
+        <value-el color="blue">avoid_explosives</value-el>
+        <value-el color="pink">buy_command_post</value-el>
+        <value-el color="orange">create_distance_close_quarter_enemy</value-el>
+        <value-el>create_distance_general</value-el>
+        <value-el color="gray">collect_ammo_oportunistic</value-el>
+        <value-el color="yellow">collect_free_ammo</value-el>
+        <value-el>collect_expensive_ammo</value-el>
+        <value-el>engage_enemy</value-el>
+        <value-el>engage_enemy_close_quarters</value-el>
+        <value-el>execute_enemy_unit</value-el>
+        <value-el color="blue">explore_unit</value-el>
+        <value-el color="green">find_suitable_place_to_engage</value-el>
+        <value-el color="yellow">focus_on_killing_hard-enemy</value-el>
+        <value-el color="green">get_behind_cover</value-el>
+        <value-el color="red">get_new_gun_calm_enviroment</value-el>
+        <value-el color="cyan">get_new_gun_chaotic</value-el>
+        <value-el color="blue">locate_enemy</value-el>
+        <value-el color="pink">reload_return_to_base</value-el>
+        <value-el>run_for_cover</value-el>
+        <value-el color="green">run and scan</value-el>
+        <value-el color="red">switch to rifle</value-el>
+        <value-el color="cyan">switch_to_shotgun</value-el>
+        <value-el color="blue">scan_for_enemies</value-el>
+        <value-el color="pink">wait_until_healthy</value-el>
+      </valueset>
+    </valuetype-def>
+  </head>
+  <body>
+    <font color="#000000" face="SansSerif.plain" size="12" style="plain"/>
+    <track-spec color-attr="token" name="Context" type="primary">
+      <font color="#000000" face="Dialog.plain" size="10" style="plain"/>
+      <attribute name="token" valuetype="String"/>
+    </track-spec>
+    <track-spec color-attr="type" edit-takeover="false" name="Unit Task" type="primary">
+      <font color="#000000" face="Dialog.plain" size="10" style="plain"/>
+      <attribute name="type" valuetype="type_InternalValueType_0"/>
+    </track-spec>
+    <track-spec color-attr="category" name="Planning Unit" type="primary">
+      <font color="#000000" face="Dialog.plain" size="10" style="plain"/>
+      <attribute name="category" valuetype="category_InternalValueType_0"/>
+    </track-spec>
+  </body>
+</annotation-spec>
