@@ -17,6 +17,25 @@
         <value-el color="green">close_quarters_combat</value-el>
         <value-el color="gray">avoid_explosives</value-el>
       </valueset>
+      <valueset name="hi there">
+        <value-el color="#FF3333">asdf</value-el>
+        <value-el color="#6666FF">fads</value-el>
+      </valueset>
+      <valueset name="ValueSet_Fail1">
+        <value-el color="#6666FF">Planning Unit: Implausible</value-el>
+        <value-el color="#660099">Planning Unit: Does Not Exist</value-el>
+        <value-el color="#0000CC">Planning Unit: Not Predicted</value-el>
+        <value-el color="#33FF33">Unit Task: Implausible</value-el>
+        <value-el color="#00CC33">Unit Task: Does Not Exist</value-el>
+        <value-el color="#009966">Unit Task: Not Predicted</value-el>
+        <value-el color="#006600">Unit Task: Not In Order</value-el>
+        <value-el color="#FFCC00">Miscellaneous</value-el>
+      </valueset>
+      <valueset name="testValueSet">
+        <value-el color="#CC0033">ValueName1</value-el>
+        <value-el color="#99CC00">ValueName2</value-el>
+        <value-el color="#FFCCCC">ValueName3</value-el>
+      </valueset>
       <valueset name="type_InternalValueType_0">
         <value-el color="green">adjust_position_slightly</value-el>
         <value-el color="red">advance</value-el>
@@ -44,6 +63,17 @@
         <value-el color="orange">switch_to_shotgun_stategic</value-el>
         <value-el color="pink">wait_until_healthy</value-el>
       </valueset>
+      <valueset name="Planning Unit: Implausible">
+        <value-el color="#CC0099">Planning Unit: Implausible</value-el>
+      </valueset>
+      <valueset name="Failure Type">
+        <value-el color="#6666FF">Planning Unit: Implausible</value-el>
+        <value-el color="#CC33FF">Planning Unit: Does Not Exist</value-el>
+        <value-el color="#99FF66">Unit Task: Implausible</value-el>
+        <value-el color="#CCFF66">Unit Task: Does Not Exist</value-el>
+        <value-el color="#99FF00">Unit Task: Not in Planning Unit</value-el>
+        <value-el color="#CC6600">Miscellaneous</value-el>
+      </valueset>
     </valuetype-def>
   </head>
   <body>
@@ -52,13 +82,17 @@
       <font color="#000000" face="Dialog.plain" size="10" style="plain"/>
       <attribute name="token" valuetype="String"/>
     </track-spec>
+    <track-spec color-attr="category" name="Planning Unit" type="primary">
+      <font color="#000000" face="Dialog.plain" size="10" style="plain"/>
+      <attribute name="category" valuetype="category_InternalValueType_0"/>
+    </track-spec>
     <track-spec color-attr="type" edit-takeover="false" name="Unit Task" type="primary">
       <font color="#000000" face="Dialog.plain" size="10" style="plain"/>
       <attribute name="type" valuetype="type_InternalValueType_0"/>
     </track-spec>
-    <track-spec color-attr="category" name="Planning Unit" type="primary">
+    <track-spec color-attr="AttributeTest1" name="Failure2" type="primary">
       <font color="#000000" face="Dialog.plain" size="10" style="plain"/>
-      <attribute name="category" valuetype="category_InternalValueType_0"/>
+      <attribute display="true" name="AttributeTest1" valuetype="ValueSet_Fail1"/>
     </track-spec>
     <track-spec name="Notes" type="primary"/>
   </body>
